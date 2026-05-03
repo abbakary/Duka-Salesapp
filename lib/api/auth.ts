@@ -32,7 +32,7 @@ function mapCompany(raw: any): Company {
     id: raw.id,
     name: raw.name,
     types: raw.types ?? [],
-    logo: raw.logo,
+    logo: raw.logo?.replace('http://localhost:8000', 'https://duka-salesplatform-1.onrender.com') ?? raw.logo,
     address: raw.address,
     phone: raw.phone,
     email: raw.email,
